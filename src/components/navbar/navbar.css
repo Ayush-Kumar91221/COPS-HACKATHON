@@ -1,0 +1,19 @@
+        /* Style for the navigation bar */
+        .navbar {
+            background-color: #16213E; /* Dark blue background color */
+            color: #ffffff; /* White text color */
+            padding: 10px 0;
+        }
+
+        /* Style for the navigation links */
+        .navbar a {
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        /* Style for the navigation links on hover */
+        .navbar a:hover {
+            border-bottom: 2px solid #ffffff; /* White underline on hover */
+        }
