@@ -1,7 +1,16 @@
 import './Homepage.css'
+import PlusIcon from "../Icons/plus-large-svgrepo-com.svg"
+import jsonData from '../items.json'; 
+import { useState } from 'react';
 const Home=()=>{
+    const [data, setData] = useState(jsonData);
+    const addItem = (newItem) => {
+        const updatedData = { ...data };
+        updatedData.items.push(newItem);
+        setData(updatedData);
+    }
     return(
-        <div>
+        <div className='HomePage'>
     <h1>Expense Tracker</h1>
     <table>
         <tr>
@@ -35,6 +44,9 @@ const Home=()=>{
             <td>60.00</td>
         </tr>
     </table>
+    <div>
+        <button><img src={PlusIcon} alt=""/> Add Items</button>
+    </div>
     </div>
     )
 }

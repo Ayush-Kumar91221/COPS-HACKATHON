@@ -1,6 +1,6 @@
         /* Style for the navigation bar */
         .navbar {
-            background-color: #16213E; /* Dark blue background color */
+            background-color:#bea895; /* Dark blue background color */
             color: #ffffff; /* White text color */
             padding: 10px 0;
         }
@@ -19,9 +19,5 @@
         }
         .navbar img{
             height: 30px;
-            color:white;
-            background-color: white;
-        }
-        svg{
-            color:white
+
         }

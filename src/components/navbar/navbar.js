@@ -1,5 +1,5 @@
 import "./navbar.css"
-import ProfileIcon from '../Icons/ProfileIcon.svg'
+import ProfileIcon from '../Icons/profile-circle-svgrepo-com.svg'
 const Navbar =()=>{
     return(
 
@@ -9,7 +9,7 @@ const Navbar =()=>{
         <a href="/help">FAQs</a>
         <a href="/about">About Us</a>
         <a href="/contact">Contact Us</a>
-        <a href="/profile"><img src={ProfileIcon} alt="logo.png" className="w-[20px] md:w-[30px] text-white"/></a>
+        <a href="/profile"><img src={ProfileIcon} alt="logo.png" className="w-[20px] md:w-[30px]"/></a>
     </nav>
     )
 }
