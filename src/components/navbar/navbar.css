@@ -17,3 +17,11 @@
         .navbar a:hover {
             border-bottom: 2px solid #ffffff; /* White underline on hover */
         }
+        .navbar img{
+            height: 30px;
+            color:white;
+            background-color: white;
+        }
+        svg{
+            color:white
+        }
