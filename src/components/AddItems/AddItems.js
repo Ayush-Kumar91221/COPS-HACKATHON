@@ -4,17 +4,21 @@ import jsonData from '../items.json';
 import { Link,useNavigate } from 'react-router-dom';
 const AddItems =()=>{
     const navigate= useNavigate();
+    const [expenses, setExpenses] = useState([]);
     const [formData, setFormData] = useState({
         expenseDate: '',
         expenseCategory: '',
         expenseDescription:'',
         expenseAmount:''
       });
-      const [data, setData] = useState(jsonData);
+      const storedExpenses = JSON.parse(localStorage.getItem('Expenses'));
+      if (storedExpenses) {
+        setExpenses(storedExpenses);
+      }
       const addItem = (newItem) => {
-          const updatedData = { ...data };
-          updatedData.items.push(newItem);
+          setExpenses({...newItem});
           setData(updatedData);
+          localStorage.setItem('Expenses', JSON.stringify(expenses));
       }
     function SubmitEvent(e) {
         const { expenseDate, expenseCategory, expenseAmount, expenseDescription } = e.target;
@@ -25,7 +29,8 @@ const AddItems =()=>{
           "expenseDescription": expenseDescription,
           "expenseDate":expenseDate
         });
-        navigate('/')
+        addItem(formData);
+        navigate('/');
     
     }  
     return (
