@@ -29,6 +29,9 @@ button{
     border-radius: 5px;
     margin-left: 190px;
 }
+button:hover{
+    transform: scale(1.2);
+}
 img{
     width: 20px;
 }

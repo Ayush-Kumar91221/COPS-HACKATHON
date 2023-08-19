@@ -2,6 +2,7 @@ import './Homepage.css'
 import PlusIcon from "../Icons/plus-large-svgrepo-com.svg"
 import jsonData from '../items.json'; 
 import { useState } from 'react';
+
 const Home=()=>{
     const [data, setData] = useState(jsonData);
     const addItem = (newItem) => {
@@ -45,7 +46,7 @@ const Home=()=>{
         </tr>
     </table>
     <div>
-        <button><img src={PlusIcon} alt=""/> Add Items</button>
+        <a href="/add"><button><img src={PlusIcon} alt=""/> Add Items</button></a>
     </div>
     </div>
     )
